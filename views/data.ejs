@@ -77,12 +77,12 @@
 						<hr>
 						<div>
 
-							<a id="downloadAll" href="http://floodatlas.org/asfpm/data/toledo/ToledoFloodHazards.zip" class="heading-text" style=" font-size: 18px; text-align: right;">
+							<a id="downloadAll" href="<%= appdata.projects[project].urls.downloadAll %>" class="heading-text" style=" font-size: 18px; text-align: right;">
 								<i class="fa fa-lg fa-download"></i>
 								Download All Files
 							</a>
 							<hr>
-									<a href="http://216.165.135.4:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer" class="heading-text" style=" font-size: 18px; text-align: right;">
+									<a href="<%= appdata.projects[project].urls.wms %>" class="heading-text" style=" font-size: 18px; text-align: right;">
 										<i class="fa fa-fw fa-lg fa-terminal"></i>
 										Access the WMS Service
 									</a>

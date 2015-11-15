@@ -99,7 +99,7 @@ router.get('/:collum/:collumValue', function(req, res) {
 	  			console.log(notBatch)
 	  			x['headings'] = _.uniq(notBatch)
 	  			x['title'] = 'Data Portal'
-
+	  			x['project'] = collum
 
       		res.render('data', x)
     	});
