@@ -1,0 +1,108 @@
+<html>
+	<% include partials/template/head.ejs %>
+	<body>
+		<% include partials/template/header.ejs %>
+
+				<!-- modals -->
+		<div class="modal fade" id="metaModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header heading-text">
+						<button type="button" class="close" data-dismiss="modal">
+							<span aria-hidden="true">&times;</span>
+							<span class="sr-only">Close</span>
+						</button>
+						<h4 class="modal-title"></h4>
+					</div>
+					<!-- /.modal-header -->
+					<div class="modal-body"></div>
+					<!-- /.modal-body -->
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">
+							Close
+						</button>
+						<a type="button" class="btn btn-primary" id ="downloadBTN">
+							Download
+						</a>
+					</div>
+					<!-- /.modal-footer -->
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<div class="container" >
+			<br>
+			<div class="row">
+				<div class="col-md-8" role="main" >
+					<!-- #damages-section -->
+					<% headings.forEach(function(groupTitle){%>
+						<%var group = myResult.rows.filter(function(d){ return (d.title==groupTitle)}) %>
+
+					<div id='section'>
+						<h3 class="heading-text"><%=groupTitle%></h3>
+						<ul class="media-list">
+							<%(group).forEach(function(row){%>
+
+									<li class="media">
+										<a class="media-right media-top" href="<%= row.link%>">
+											<img class="img-circle project-circle" src="/asfpm/floodatlasredesign/public/img/data_thumbs/<%= row.project%>/<%= row.img_src%>">
+										</a>
+										<div class="media-body">
+											<h4 class="media-heading"><%=row.subtitle%></h4>
+
+											<ul class="fa-ul">
+												<li>
+													<a href="#" onclick="viewMeta(<%= JSON.stringify(row) %>)" title="view metadata"><i class="fa fa-fw fa-tag"></i>&nbsp;Preview Metadata</a>
+												</li>
+												<li>
+
+													<a class="fileLocation" href="<%= row.link%>" title="download file"><i class="fa fa-fw fa-download"></i>&nbsp;Download </a>
+												</li>
+											</ul>
+										</div>
+										<!-- /.media-body -->
+									</li>
+									<!-- /.media -->
+							<% }) %>
+						</ul>
+						<!-- /.media-list -->
+					</div>
+					<%})%>
+				</div>
+				<!-- /.col-md-8[role="main"] -->
+				<div class="col-md-4">
+					<div class="affix-top sidenav" role="complementary">
+						<hr>
+						<div>
+
+							<a id="downloadAll" href="http://floodatlas.org/asfpm/data/toledo/ToledoFloodHazards.zip" class="heading-text" style=" font-size: 18px; text-align: right;">
+								<i class="fa fa-lg fa-download"></i>
+								Download All Files
+							</a>
+							<hr>
+									<a href="http://216.165.135.4:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer" class="heading-text" style=" font-size: 18px; text-align: right;">
+										<i class="fa fa-fw fa-lg fa-terminal"></i>
+										Access the WMS Service
+									</a>
+															<hr>
+							<ul  class="nav nav-pills nav-stacked">
+								<li></li>
+							</ul>
+							<!-- /.nav -->
+						</div>
+					</div>
+					<!-- /.affix-top[role="complementary"] -->
+				</div>
+				<!-- /.col-md-4 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+		<br>
+		<% include partials/template/footer.ejs %>
+		<% include partials/template/jsdefaults.ejs %>
+	</body>
+
+</html>

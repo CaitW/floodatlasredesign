@@ -1,0 +1,71 @@
+<html>
+	<% include partials/template/head.ejs %>
+	<body>
+		<% include partials/template/header.ejs %>
+		<div class="container">
+			<br>
+			<div class="row">
+				<div class="col-md-8 col-sm-8" role="main">
+					<img src="/asfpm/floodatlasredesign/public/img/<%=project%>_thmb.png" class="project-start img-circle"></img>
+					<%- include('partials/content/aboutText/'+project+'')%>
+
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<hr class="visible-xs">
+					<div class="affix-top sidenav" role="complementary">
+						<ul class="nav">
+							<li>
+								<a href="<%= appdata.projects[project].projectUrl%>" class="heading-text" style=" font-size: 24px; text-align: right;">
+									<i class="fa fa-lg fa-share"></i>
+									Launch the <%= appdata.projects[project].projectName%>
+
+								</a>
+							</li>
+
+							<% if (appdata.projects[project].data==true){ %>
+								<hr>
+								<li role="presentation"><p class="panel-title" style="color: grey">
+									Access the Data</p></li>
+																	<li>
+										<a href="/redesign/data/project/<%=project%>">Data Portal</a>
+									</li>
+							<% } %>
+							<% if (appdata.projects[project].links!=undefined){ %>
+								<hr>
+								<li role="presentation"><p class="panel-title" style="color: grey">
+									Additional Resources</p></li>
+								<% (appdata.projects[project].links).forEach(function(d){ %>
+									<li>
+										<a href="<%=d.href%>"><%=d.text%></a>
+									</li>
+								<% }) %>
+								<!-- /each link -->
+							<% } %>
+							<!-- /if links -->
+							<% if (appdata.projects[project].contact!=undefined){ %>
+								<hr>
+								<li role="presentation"><p class="panel-title" style="color: grey">
+									Contact</p></li>
+								<% (appdata.projects[project].contact).forEach(function(d){ %>
+									<li>
+										<a href="<%=d.href%>">
+											<i class="fa fa-paper-plane"></i>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<%=d.name%>
+											&mdash;
+											<em><%=d.organization%></em>
+										</a>
+									</li>
+								<% }) %>
+								<!-- /each link -->
+							<% } %>
+							<!-- /if links -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<% include partials/template/footer.ejs %>
+		<% include partials/template/jsdefaults.ejs %>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+{
+  "projects": {
+    "toledo": {
+      "projectName": "Toledo Flood Hazard Visualizer",
+      "projectUrl": "http://floodatlas.org/toledofloodhazards",
+      "projectTag": "toledo",
+      "data": true,
+      "date": "15-1",
+      "links": [
+        {
+          "text": "Economic Assessment of Green Infrastructure Strategies for Climate Change Adaptation: Pilot Studies in the Great Lakes Region",
+          "href": "http://coast.noaa.gov/digitalcoast/publications/climate-change-adaptation-pilot"
+        },
+        {
+          "text": "Toledo’s Chronic Urban Flooding",
+          "href": "http://greatlakesresilience.org/stories/ohio/toledo%E2%80%99s-chronic-urban-flooding-0"
+        }
+      ],
+      "contact": [
+        {
+          "name": "Jeff Stone",
+          "organization": "ASFPM Science Services",
+          "href": "mailto:jeff@floods.org"
+        },
+        {
+          "name": "Patekka Bannister",
+          "organization": "City of Toledo",
+          "href": "mailto:patekka.bannister@toledo.oh.gov"
+        },
+        {
+          "name": "Lori Cary-Kothera",
+          "organization": "NOAA Office for Coastal Management",
+          "href": "mailto:lori.cary-kothera@noaa.gov"
+        }
+      ],
+      "urls": {
+        "downloadAll":  "http://floodatlas.org/asfpm/data/toledo/ToledoFloodHazards.zip",
+        "wms": "http://216.165.135.4:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer"
+      }
+    },
+    "duluth": {
+      "projectName": "Duluth Flood Hazard Visualizer",
+      "projectUrl": "http://floodatlas.org/duluthfloodhazards",
+      "projectTag": "duluth",
+      "data": true,
+      "date": "15-1",
+      "links": [
+        {
+          "text": "Economic Assessment of Green Infrastructure Strategies for Climate Change Adaptation: Pilot Studies in the Great Lakes Region",
+          "href": "http://coast.noaa.gov/digitalcoast/publications/climate-change-adaptation-pilot"
+        }
+      ],
+      "contact": [
+        {
+          "name": "Jeff Stone",
+          "organization": "ASFPM Science Services",
+          "href": "mailto:jeff@floods.org"
+        },
+        {
+          "name": "Patekka Bannister",
+          "organization": "City of Toledo",
+          "href": "mailto:patekka.bannister@toledo.oh.gov"
+        },
+        {
+          "name": "Lori Cary-Kothera",
+          "organization": "NOAA Office for Coastal Management",
+          "href": "mailto:lori.cary-kothera@noaa.gov"
+        }
+      ],
+      "urls": {
+        "downloadAll":  "http://floodatlas.org/asfpm/data/duluth/DuluthFloodHazards.zip",
+        "wms": "http://216.165.135.4:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer"
+      }
+    },
+    "bluffviewer": {
+      "projectName": "Ozaukee County Bluff Viewer",
+      "projectUrl": "http://216.165.135.4/asfpm/bluffviewer/",
+      "projectTag": "bluffviewer",
+      "data": false,
+      "date": "14-8",
+      "links": [
+        {
+          "text": "Communicating Long-Term Bluff Erosion to Prevent Unsustainable Development",
+          "href": "http://greatlakesresilience.org/case-studies/land-use-zoning/communicating-long-term-bluff-erosion-prevent-unsustainable-development"
+        },
+        {
+          "text": "Stabilizing Concordia University’s Bluff",
+          "href": "reatlakesresilience.org/stories/wisconsin/stabilizing-concordia-university’s-bluff-0"
+        }
+      ]
+    },
+    "floodview": {
+      "projectName": "Flood Photo Viewer",
+      "projectUrl": "http://floodatlas.org/floodview",
+      "projectTag": "floodview",
+      "data": false,
+      "date": "14-6",
+      "contact": [
+        {
+          "name": "Jeff Stone",
+          "organization": "ASFPM Science Services",
+          "href": "mailto:jeff@floods.org"
+        },
+        {
+          "name": "Blake Draper",
+          "organization": "USGS",
+          "href": "mailto:bdraper@usgs.gov "
+        }
+      ]
+    },
+    "glcrpg": {
+      "projectName": "Great Lakes Coastal Resilience Planning Guide",
+      "projectUrl": "http://greatlakesresilience.org/",
+      "projectTag": "glcrpg",
+      "data": false,
+      "date": "13-0"
+    },
+    "oblique": {
+      "projectName": "Wisconsin Shoreline Inventory and Oblique Photo Viewer",
+      "projectUrl": "http://floodatlas.org/wcmp/obliqueviewer/",
+      "projectTag": "oblique",
+      "data": false,
+      "date": "11-0"
+    },
+    "slpSurvey": {
+      "projectName": "Floodplain Management 2010: State & Local Programs Survey and Reports Web Mapping Tool",
+      "projectUrl": "http://floodatlas.org/survey/survey/map",
+      "projectTag": "slpSurvey",
+      "data": false,
+      "date": "10-0"
+    }
+  },
+  "projectList": [
+    "toledo",
+    "duluth",
+    "bluffviewer",
+    "floodview",
+    "glcrpg",
+    "oblique",
+    "slpSurvey"
+  ]
+}

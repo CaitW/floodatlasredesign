@@ -1,0 +1,35 @@
+<html>
+	<% include partials/template/head.ejs %>
+	<body>
+		<% include partials/template/header.ejs %>
+
+		<div class="container">
+		<br>
+			<div class="row">
+				<div class="col-md-8 col-sm-8" role="main">
+			<% (appdata.projectList).forEach(function(d){ %>
+				<div class="media">
+					<div class="media-left media-middle">
+						<a href= "/redesign/projects/<%=d %>">
+							<img class="media-object img-circle project-circle" src="/asfpm/floodatlasredesign/public/img/<%=d%>_thmb.png">
+				 		</a>
+					</div>
+					<div class="media-body" style="vertical-align: middle;">
+						<h4 class="heading-text media-heading">
+							<a href= "/redesign/projects/<%=d %>">
+								<%= appdata.projects[d].projectName %>
+							</a>
+						</h4>
+					</div>
+				</div>
+				<br>
+			<% }) %>
+			</div>
+			</div>
+		</div>
+
+
+		<% include partials/template/footer.ejs %>
+		<% include partials/template/jsdefaults.ejs %>
+	</body>
+</html>

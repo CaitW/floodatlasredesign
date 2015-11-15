@@ -1,0 +1,16 @@
+CREATE ROLE floodatlas_user LOGIN ENCRYPTED PASSWORD 'md552ca40cee559c9fa0166fdf7e9333e42'
+  SUPERUSER REPLICATION
+   VALID UNTIL 'infinity';
+
+CREATE DATABASE floodatlas_db
+  WITH ENCODING='UTF8'
+       OWNER=floodatlas_user
+       TEMPLATE=postgres
+       LC_COLLATE='English_United States.1252'
+       LC_CTYPE='English_United States.1252'
+       CONNECTION LIMIT=-1
+       TABLESPACE=pg_default;
+
+CREATE TABLE datafiles(TITLE varchar, SUBTITLE varchar, LINK varchar, FORMAT varchar, GEOMETRY varchar, AUTHOR varchar, TAGS varchar, DESCRIPTION varchar, PROJECT varchar BATCH boolean IMG_SRC varchar) WITH (OIDS=TRUE);
+
+COPY datafiles FROM 'D:\sites\floodatlas.org\asfpm\www\floodatlasredesign\data\data.csv' DELIMITER ',' CSV HEADER
