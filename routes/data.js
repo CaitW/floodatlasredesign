@@ -98,8 +98,8 @@ router.get('/:collum/:collumValue', function(req, res) {
 	  			notBatch = ((result.rows).filter(function(d, i){ return d.batch!=true }) ).map(function(d, i){ return d.title})
 	  			console.log(notBatch)
 	  			x['headings'] = _.uniq(notBatch)
-	  			x['title'] = 'Data Portal'
-	  			x['project'] = collum
+	  			x['title'] = 'Data Portal';
+	  			x['project'] = collum;
 
       		res.render('data', x)
     	});
