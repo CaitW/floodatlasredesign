@@ -68,7 +68,6 @@ router.get('/query?:queryString', function(req, res) {
 	  			x['headings'] = _.uniq(notBatch)
 	  			x['title'] = 'Data Portal'
 
-
       		res.render('data', x)
     	});
 
@@ -78,9 +77,9 @@ router.get('/query?:queryString', function(req, res) {
 	})
 
 });
-router.get('/:collum/:collumValue', function(req, res) {
-	var collum = req.params.collum
-	var collumValue = req.params.collumValue
+router.get('/:column/:columnValue', function(req, res) {
+	var column = req.params.column
+	var columnValue = req.params.columnValue
 	var client = new pg.Client(conString);
 	var x = {url : req.url}
 	client.connect(function(err) {
@@ -88,9 +87,9 @@ router.get('/:collum/:collumValue', function(req, res) {
 	    return console.error('could not connect to postgres', err);
 	  }else{
 	  	 var query = client.query({
-		      text: "SELECT * FROM datafiles WHERE "+collum+" = $1",
-		      values: [collumValue],
-		      name: 'query by single collum'
+		      text: "SELECT * FROM datafiles WHERE "+column+" = $1",
+		      values: [columnValue],
+		      name: 'query by single column'
 		    });
 	  	 	query.on('row', function(row,result) { result.addRow(row); });
 	  		query.on('end', function(result) {
@@ -99,7 +98,7 @@ router.get('/:collum/:collumValue', function(req, res) {
 	  			console.log(notBatch)
 	  			x['headings'] = _.uniq(notBatch)
 	  			x['title'] = 'Data Portal';
-	  			x['project'] = collum;
+	  			x['project'] = column;
 
       		res.render('data', x)
     	});
