@@ -1,4 +1,5 @@
 var express = require('express');
+var appdata = require('../data/appdata.json')
 var router = express.Router();
 var pg = require('pg')
 var _ =require('underscore')
@@ -25,7 +26,8 @@ router.get('/', function(req, res) {
 	  			x['myResult'] = result;
 	  			notBatch = ((result.rows).filter(function(d, i){ return d.batch!=true }) ).map(function(d, i){ return d.title})
 	  			x['headings'] = _.uniq(notBatch)
-	  			x['title'] = 'Data Portal'
+	  			x['title'] = 'Data Portal';
+	  			x['project'] = "";
 
       		res.render('data', x)
     	});
@@ -66,7 +68,8 @@ router.get('/query?:queryString', function(req, res) {
 	  			x['myResult'] = result;
 	  			notBatch = ((result.rows).filter(function(d, i){ return d.batch!=true }) ).map(function(d, i){ return d.title})
 	  			x['headings'] = _.uniq(notBatch)
-	  			x['title'] = 'Data Portal'
+	  			x['title'] = 'Data Portal';
+	  			x['project'] = "";
 
       		res.render('data', x)
     	});
