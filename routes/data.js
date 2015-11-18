@@ -101,7 +101,7 @@ router.get('/:column/:columnValue', function(req, res) {
 	  			console.log(notBatch)
 	  			x['headings'] = _.uniq(notBatch)
 	  			x['title'] = 'Data Portal';
-	  			x['project'] = column;
+	  			x['project'] = columnValue;
 
       		res.render('data', x)
     	});
