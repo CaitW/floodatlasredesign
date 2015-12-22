@@ -69,7 +69,7 @@
       ],
       "urls": {
         "downloadAll":  "http://floodatlas.org/asfpm/data/duluth/DuluthFloodHazards.zip",
-        "wms": "http://216.165.135.4:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer"
+        "wms": "http://216.165.135.4:6080/arcgis/rest/services/NOAA_ECON/Duluth_MapService/MapServer"
       }
     },
     "bluffviewer": {
