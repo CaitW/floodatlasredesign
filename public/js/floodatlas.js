@@ -18,7 +18,13 @@ var map = L.map('header-map', {
     	L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {name: 'Stamen.Toner', attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'})
     ],
     attributionControl: false,
-     zoomControl: false
+    zoomControl: false,
+    dragging: false,
+    touchZoom: false,
+    scrollWheelZoom: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false
 });
 // var footerMap= L.map('footer-map', {
 //     center: [43.06161389125079, -89.44038391113281],
