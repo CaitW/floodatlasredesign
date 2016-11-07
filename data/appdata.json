@@ -1,7 +1,74 @@
 {
   "projects": {
+    "toledo_2d": {
+      "projectName": "Toledo Flood Hazard Visualizer - 2D Model",
+      "projectUrl": "http://floodatlas.org/toledofloodhazards_2d",
+      "projectTag": "toledo_2d",
+      "data": true,
+      "date": "16-11",
+      "links": [
+        {
+          "text": "Economic Assessment of Green Infrastructure Strategies for Climate Change Adaptation: Pilot Studies in the Great Lakes Region",
+          "href": "http://coast.noaa.gov/digitalcoast/publications/climate-change-adaptation-pilot"
+        },
+        {
+          "text": "Toledo’s Chronic Urban Flooding",
+          "href": "http://greatlakesresilience.org/stories/ohio/toledo%E2%80%99s-chronic-urban-flooding-0"
+        }
+      ],
+      "contact": [
+        {
+          "name": "Jeff Stone",
+          "organization": "ASFPM Science Services",
+          "href": "mailto:jeff@floods.org"
+        },
+        {
+          "name": "Patekka Bannister",
+          "organization": "City of Toledo",
+          "href": "mailto:patekka.bannister@toledo.oh.gov"
+        },
+        {
+          "name": "Lori Cary-Kothera",
+          "organization": "NOAA Office for Coastal Management",
+          "href": "mailto:lori.cary-kothera@noaa.gov"
+        }
+      ],
+      "urls": {
+        "downloadAll":  "http://floodatlas.org/asfpm/data/toledo_2d/ToledoFloodHazards.zip",
+        "wms": "http://69.11.243.109:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer"
+      }
+    },
+    "duluth_2d": {
+      "projectName": "Duluth Flood Hazard Visualizer - 2D Model",
+      "projectUrl": "http://floodatlas.org/duluthfloodhazards_2d",
+      "projectTag": "duluth_2d",
+      "data": true,
+      "date": "16-11",
+      "links": [
+        {
+          "text": "Economic Assessment of Green Infrastructure Strategies for Climate Change Adaptation: Pilot Studies in the Great Lakes Region",
+          "href": "http://coast.noaa.gov/digitalcoast/publications/climate-change-adaptation-pilot"
+        }
+      ],
+      "contact": [
+        {
+          "name": "Jeff Stone",
+          "organization": "ASFPM Science Services",
+          "href": "mailto:jeff@floods.org"
+        },
+        {
+          "name": "Lori Cary-Kothera",
+          "organization": "NOAA Office for Coastal Management",
+          "href": "mailto:lori.cary-kothera@noaa.gov"
+        }
+      ],
+      "urls": {
+        "downloadAll":  "http://floodatlas.org/asfpm/data/duluth/DuluthFloodHazards.zip",
+        "wms": "http://69.11.243.109:6080/arcgis/rest/services/NOAA_ECON/Duluth_MapService/MapServer"
+      }
+    },
     "toledo": {
-      "projectName": "Toledo Flood Hazard Visualizer",
+      "projectName": "Toledo Flood Hazard Visualizer - HEC Model",
       "projectUrl": "http://floodatlas.org/toledofloodhazards",
       "projectTag": "toledo",
       "data": true,
@@ -35,11 +102,11 @@
       ],
       "urls": {
         "downloadAll":  "http://floodatlas.org/asfpm/data/toledo/ToledoFloodHazards.zip",
-        "wms": "http://216.165.135.4:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer"
+        "wms": "http://69.11.243.109:6080/arcgis/rest/services/ToledoFloodHazards_NOAAEcon/MapServer"
       }
     },
     "duluth": {
-      "projectName": "Duluth Flood Hazard Visualizer",
+      "projectName": "Duluth Flood Hazard Visualizer - HEC Model",
       "projectUrl": "http://floodatlas.org/duluthfloodhazards",
       "projectTag": "duluth",
       "data": true,
@@ -64,7 +131,7 @@
       ],
       "urls": {
         "downloadAll":  "http://floodatlas.org/asfpm/data/duluth/DuluthFloodHazards.zip",
-        "wms": "http://216.165.135.4:6080/arcgis/rest/services/NOAA_ECON/Duluth_MapService/MapServer"
+        "wms": "http://69.11.243.109:6080/arcgis/rest/services/NOAA_ECON/Duluth_MapService/MapServer"
       }
     },
     "bluffviewer": {
