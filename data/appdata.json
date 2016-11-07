@@ -193,6 +193,8 @@
     }
   },
   "projectList": [
+    "toledo_2d",
+    "duluth_2d",
     "toledo",
     "duluth",
     "bluffviewer",
